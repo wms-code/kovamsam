@@ -1,16 +1,7 @@
-@extends('multiauth::layouts.app')
+@extends('multiauth::layouts.admin')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ ucfirst(config('multiauth.prefix')) }} Dashboard</div>
-                <div class="card-body">
-                    @include('multiauth::message')
-                    You are logged in to {{ config('multiauth.prefix') }} side!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="page-content">
+    <h2>Blank</h2>
+    <p>Page content goes here</p>
+  </div>
 @endsection
