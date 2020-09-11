@@ -9,3 +9,10 @@
 - php artisan key:generate
 - php artisan migrate
 - php artisan multiauth:seed --role=super
+
+
+
+## admin panel login Deatiles
+
+super@admin.com
+secret123
