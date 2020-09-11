@@ -1,5 +1,7 @@
-@extends('multiauth::layouts.app') @section('content')
-<div class="container">
+@extends('multiauth::layouts.admin') 
+
+@section('content')
+<div class="page-content">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -42,7 +44,7 @@
 
                         <div class="form-group row">
                             <label for="active" class="col-md-4 col-form-label text-md-right">Active</label>
-                            <input type="checkbox" value="1" {{ $admin->active ? 'checked':'' }} name="activation" class="form-control col-md-6" id="active">
+                            <input type="checkbox" value="1" {{ $admin->active ? 'checked':'' }} name="activation"  id="inputUnchecked">
                         </div>
 
                         <div class="form-group row mb-0">
