@@ -2,7 +2,7 @@
 
 
 - git clone https://github.com/wms-code/kovamsam.git
-- cd laraveladmin
+- cd kovamsam
 - composer install
 - cp .env.example .env (if windows  : copy .env.example .env)
 - Update env (add database information)
