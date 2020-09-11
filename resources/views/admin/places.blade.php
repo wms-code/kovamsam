@@ -4,10 +4,10 @@
     
     <div class="panel">
         <div class="panel-heading">
-          <h3 class="panel-title">Dasboard </h3>
+          <h3 class="panel-title">Places </h3>
         </div>
         <div class="panel-body">
-            <livewire:dashboard>
+            <livewire:places>
         </div>
       </div>
 

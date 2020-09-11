@@ -2,13 +2,10 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
-
-use App\Admin;
-
-use Auth;
-
 use App\Role;
+use App\Admin;
+use Livewire\Component;
+use Auth;
 
 
 
@@ -22,7 +19,7 @@ class Admins extends Component
 
     public function render()
     {
-        $this->admins = Admin::where('id', '!=', Auth::user()->id())->get();
+        $this->admins = Admin::where('id', '!=', 1 )->get();
         return view('admin.users.show');
     }
 

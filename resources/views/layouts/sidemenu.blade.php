@@ -61,14 +61,14 @@
             <li class="site-menu-item has-sub">
               <a href="javascript:void(0)">
                       <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
-                      <span class="site-menu-title">Pages</span>
+                      <span class="site-menu-title">Master</span>
                               <span class="site-menu-arrow"></span>
                   </a>
               <ul class="site-menu-sub">
                 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="../pages/blank.html">
-                    <span class="site-menu-title">Blank Page</span>
+                  <a class="animsition-link" href="{{ url('admin/places') }}">
+                    <span class="site-menu-title">Places</span>
                   </a>
                 </li>
                

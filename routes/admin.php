@@ -10,6 +10,9 @@
 
     Route::view('/showusers','admin.showusers');
 
+
+    Route::view('/places','admin.places');
+
     // Login and Logout
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');
     Route::POST('/', 'LoginController@login');
