@@ -1,6 +1,12 @@
 <?php
 
-    Route::GET('/home', 'AdminController@index')->name('admin.home');
+    Route::view('/home', 'admin.home')->name('admin.home');
+
+
+    
+
+    Route::view('/users','admin.users');
+
     // Login and Logout
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');
     Route::POST('/', 'LoginController@login');
