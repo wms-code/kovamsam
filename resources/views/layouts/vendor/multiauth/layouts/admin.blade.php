@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/material-design/material-design.min.css">
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-   
+    @livewireStyles
     <!--[if lt IE 9]>
     <script src="{{ url('/global') }}/vendor/html5shiv/html5shiv.min.js"></script>
     <![endif]-->
@@ -137,7 +137,8 @@
     <script src="{{ url('/global') }}/js/Plugin/slidepanel.js"></script>
     <script src="{{ url('/global') }}/js/Plugin/switchery.js"></script>
 
-   
+    @livewireScripts
+    
     <script>
       (function(document, window, $){
         'use strict';

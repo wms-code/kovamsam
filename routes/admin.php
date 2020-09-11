@@ -2,10 +2,13 @@
 
     Route::view('/home', 'admin.home')->name('admin.home');
 
+    // Admin Lists
+    Route::get('/show', 'AdminController@show')->name('admin.show');
 
-    
+    Route::view('users/show', 'admin.users.home')->name('admin.users');
 
-    Route::view('/users','admin.users');
+
+    Route::view('/showusers','admin.showusers');
 
     // Login and Logout
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');
@@ -27,9 +30,6 @@
     Route::delete('/{admin}', 'RegisterController@destroy')->name('admin.delete');
     Route::patch('/{admin}', 'RegisterController@update')->name('admin.update');
 
-    // Admin Lists
-    Route::get('/show', 'AdminController@show')->name('admin.show');
-    Route::get('/me', 'AdminController@me')->name('admin.me');
 
     // Admin Roles
     Route::post('/{admin}/role/{role}', 'AdminRoleController@attach')->name('admin.attach.roles');

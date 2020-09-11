@@ -1,4 +1,4 @@
-@extends('multiauth::layouts.admin')
+@extends('layouts.admin')
 @section('content')
 <div class="page-content">
     
@@ -7,7 +7,7 @@
           <h3 class="panel-title">Heading With Desc </h3>
         </div>
         <div class="panel-body">
-            <livewire:admins>
+            <livewire:show-admins>
         </div>
       </div>
 
