@@ -68,9 +68,16 @@
                 
                 <li class="site-menu-item active">
                   <a class="animsition-link" href="{{ url('admin/places') }}">
-                    <span class="site-menu-title">Places</span>
+                    <span class="site-menu-title">இடம் </span>
                   </a>
                 </li>
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/ages') }}">
+                    <span class="site-menu-title">வயது </span>
+                  </a>
+                </li>
+               
                
                 <li class="site-menu-item">
                   <a class="animsition-link" href="../pages/project.html">
