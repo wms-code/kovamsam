@@ -18,7 +18,7 @@ class Ages extends Component
     public function render()
     {
         $this->ages=Age::all();
-        return view('admin.age.show');
+        return view('admin.ages.show');
     }
 
 
