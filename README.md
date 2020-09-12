@@ -9,7 +9,7 @@
 - php artisan key:generate
 - php artisan migrate
 - php artisan multiauth:seed --role=super
-
+  ssh key added
 
 
 ## admin panel login Deatiles
