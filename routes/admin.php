@@ -4,15 +4,12 @@
 
     // Admin Lists
     Route::get('/show', 'AdminController@show')->name('admin.show');
-
     Route::view('users/show', 'admin.users.home')->name('admin.users');
-
-
     Route::view('/showusers','admin.showusers');
-
-
     Route::view('/places','admin.places');
-
+    Route::view('/ages','admin.ages');
+   // Route::resource('ages', 'UserController@index');
+     
     // Login and Logout
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');
     Route::POST('/', 'LoginController@login');

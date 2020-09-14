@@ -12,12 +12,33 @@
                     </div>
                     <div class="card-body">
                        <div class="form-group">
-                         <label for="name">Age name</label>
+                         <label for="name">Age List</label>
                          <input wire:model.defer="name" type="text" class="form-control" placeholder="Age Name">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createPlace" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add Age</button>
+                                <button wire:click="createAge" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add Age</button>
+                            </span>
+                         
+                         </div>
+                    </div>
+
+                @elseif ($page == 'edit')
+
+                    <div class="card-header">
+                        Edit  Age
+                    
+                    </div>
+                    <div class="card-body">
+                       <div class="form-group">
+                         <label for="name">Age name</label>
+                         <input wire:model.name="sel_id" type="text"  class="form-control">
+                         <input wire:model.name="name" type="text"  class="form-control" placeholder="Age Name">
+                         </div>
+                         <div class="col-md-8">
+                            <span class="float-right">
+                                <button wire:click="updateAge" type="button" 
+                                class="btn btn-block btn-primary waves-effect waves-classic">Update Age</button>
                             </span>
                          
                          </div>
@@ -34,7 +55,7 @@
                         </span>
                     </div>
                     <div class="card-body">
-                        @if ($age)
+                        @if ($ages)
 
                         <table class="table">
                             <thead>
@@ -51,14 +72,13 @@
                                     <td scope="row">{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
                                     <td>
-                                        <div class="" role="group">                                            
-                                           
-
-                                            <button type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                        <div class="" role="group">      
+                                        
+                               <button wire:click="editAge({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-edit" aria-hidden="true"></i>
                                             </button>
 
-                                            <button type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+            <button  type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-delete" aria-hidden="true"></i>
                                             </button>
                                           </div>
