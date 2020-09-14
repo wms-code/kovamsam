@@ -8,6 +8,7 @@
     Route::view('/showusers','admin.showusers');
     Route::view('/places','admin.places');
     Route::view('/ages','admin.ages');
+    Route::view('/gods','admin.gods');
    // Route::resource('ages', 'UserController@index');
      
     // Login and Logout

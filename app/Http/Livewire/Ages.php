@@ -9,7 +9,7 @@ use App\Age;
 
 class Ages extends Component
 {
-     public $name,$sel_id; 
+     public $name,$sel_id,$msg; 
      public $page='show';
      public $ages;
 
@@ -25,11 +25,14 @@ class Ages extends Component
 
     public function newAge()
     {
+        $this->resetInputFields();
+        $this->msg='New';
         $this->page='add';
     }
 
     public function editAge($id)
     {
+        $this->msg='Edit';
         $record=Age::find($id);
         $this->name=$record->name;
         $this->sel_id=$record->id;
@@ -39,22 +42,22 @@ class Ages extends Component
 
     public function updateAge()
     {
-        $record=Age::find($sel_id);
+        $record=Age::find($this->sel_id);
         $record->update([
             'name'=>$this->name,
             ]);
-        
-        return view('admin.ages.show');
+
+        $this->msg='Age Updated Successfully.';
+        //$this->resetInputFields();
+        $this->page='show';       
         
     }
 
     public function deleteAge()
     {
         session()->flash('message', 'Age Updated Successfully.');
-
         $this->ages=Age::all();
-        return view('admin.ages.show');
-        
+        return view('admin.ages.show');        
     }
 
 
@@ -63,6 +66,12 @@ class Ages extends Component
         $validatedDate = $this->validate([
             'name' => 'required',
         ]);
+        
+        $this->validate([
+            'name' => 'required|min:5',
+            'phone' => 'required'
+        ]);
+
 
         Age::create($validatedDate);
 

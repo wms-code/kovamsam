@@ -4,11 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-use App\Place;
+use App\God;
 
-class Places extends Component
+class Gods extends Component
 {
-    public $name, $sel_id,$places,$msg;
+    public $name, $sel_id,$gods,$msg;
     public $page='show';
 
     private function resetInputFields(){
@@ -16,13 +16,13 @@ class Places extends Component
     }   
     public function render()
     {
-        $this->places=Place::all();
-        return view('admin.places.show');
+        $this->gods=God::all();
+        return view('admin.gods.show');
     }
     public function editPlace($id)
     {
         $this->msg='Edit';
-        $record=Place::find($id);
+        $record=God::find($id);
         $this->name=$record->name;
         $this->sel_id=$record->id;
         $this->page=('edit');    
@@ -30,11 +30,11 @@ class Places extends Component
     }
     public function updatePlace()
     {
-        $record=Place::find($this->sel_id);
+        $record=God::find($this->sel_id);
         $record->update([
             'name'=>$this->name,
             ]);
-        $this->msg='Place Updated Successfully.';        
+        $this->msg='God Updated Successfully.';        
         $this->page='show';               
     }
     public function newPlace()
@@ -48,9 +48,9 @@ class Places extends Component
             'name' => 'required',
         ]);
 
-        Place::create($validatedDate);
+        God::create($validatedDate);
 
-        session()->flash('message', 'Place Created Successfully.');
+        session()->flash('message', 'God Created Successfully.');
 
         $this->resetInputFields();
 

@@ -5,13 +5,12 @@
     <div class="col-md-8">
         <div class="card">
             @if ($page == 'add')
-
                     <div class="card-header">
-                        Add New Age
-                    
+                        Add New Age                    
                     </div>
                     <div class="card-body">
                        <div class="form-group">
+                        <input wire:model.name="msg" type="text"  class="form-control">
                          <label for="name">Age List</label>
                          <input wire:model.defer="name" type="text" class="form-control" placeholder="Age Name">
                          </div>
@@ -26,13 +25,13 @@
                 @elseif ($page == 'edit')
 
                     <div class="card-header">
-                        Edit  Age
-                    
+                        Edit  Age                    
                     </div>
                     <div class="card-body">
                        <div class="form-group">
+                        <input wire:model.name="msg" type="text"  class="form-control">
                          <label for="name">Age name</label>
-                         <input wire:model.name="sel_id" type="text"  class="form-control">
+                         <input wire:model.name="sel_id"  type="hidden"  class="form-control">
                          <input wire:model.name="name" type="text"  class="form-control" placeholder="Age Name">
                          </div>
                          <div class="col-md-8">
@@ -55,6 +54,7 @@
                         </span>
                     </div>
                     <div class="card-body">
+                        <input wire:model.name="msg" type="text"  class="form-control">
                         @if ($ages)
 
                         <table class="table">
