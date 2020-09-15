@@ -77,6 +77,13 @@
                     <span class="site-menu-title">வயது </span>
                   </a>
                 </li>
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/gods') }}">
+                    <span class="site-menu-title">God </span>
+                  </a>
+                </li>
+               
                
                
                 <li class="site-menu-item">

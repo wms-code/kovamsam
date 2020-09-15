@@ -19,7 +19,7 @@ class Gods extends Component
         $this->gods=God::all();
         return view('admin.gods.show');
     }
-    public function editPlace($id)
+    public function editGod($id)
     {
         $this->msg='Edit';
         $record=God::find($id);
@@ -28,7 +28,7 @@ class Gods extends Component
         $this->page=('edit');    
       
     }
-    public function updatePlace()
+    public function updateGod()
     {
         $record=God::find($this->sel_id);
         $record->update([
@@ -37,12 +37,13 @@ class Gods extends Component
         $this->msg='God Updated Successfully.';        
         $this->page='show';               
     }
-    public function newPlace()
+    public function newGod()
     {
         $this->resetInputFields();
+        $this->msg='New';
         $this->page='add';
     }
-    public function createPlace()
+    public function createGod()
     {
         $validatedDate = $this->validate([
             'name' => 'required',
