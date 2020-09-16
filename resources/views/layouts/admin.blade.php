@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="bootstrap material admin template">
+    <meta name="description" content="Kovamsam  கோவம்சம் Times">
     <meta name="author" content="">
     
-    <title>Kovamsammin Template</title>
+    <title>கோவம்சம் - Kovamsam Times</title>
+    
     
     <link rel="apple-touch-icon" href="{{ url('assets') }}/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="{{ url('assets') }}/images/favicon.ico">
@@ -33,6 +34,10 @@
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
     @livewireStyles
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="{{ url('/global') }}/vendor/html5shiv/html5shiv.min.js"></script>
     <![endif]-->
@@ -92,7 +97,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+      <div class="site-footer-legal">© 2020 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
       <div class="site-footer-right">
         Crafted with <i class="red-600 icon md-favorite"></i> by <a href="https://themeforest.net/user/creation-studio">Creation Studio</a>
       </div>
@@ -150,5 +155,17 @@
       })(document, window, jQuery);
     </script>
     
+    
+@push('custom-scripts')
+<script>
+    $(document).ready(function() {
+        alert('s');
+            $('.js-example-basic-single').select2();
+
+        
+    });
+</script>
+@endpush
+
   </body>
 </html>

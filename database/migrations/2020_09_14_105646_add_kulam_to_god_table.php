@@ -15,7 +15,7 @@ class AddKulamToGodTable extends Migration
     {
         Schema::table('god', function (Blueprint $table) {
             $table->unsignedBigInteger('place_id')->nullable(); 
-            $table->unsignedBigInteger('kulam_id')->nullable(); 
+            $table->unsignedBigInteger('naadu_id')->nullable(); 
             $table->string('remarks', 100)->nullable();  
         });
     }
@@ -29,7 +29,7 @@ class AddKulamToGodTable extends Migration
     {
         Schema::table('god', function (Blueprint $table) {
             $table->dropColumn('place_id');
-            $table->dropColumn('kulam_id');
+            $table->dropColumn('naadu_id');
             $table->dropColumn('remarks');
 
             

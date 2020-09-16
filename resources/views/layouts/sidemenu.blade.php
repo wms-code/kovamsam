@@ -3,17 +3,109 @@
       <div>
         <div>
           <ul class="site-menu" data-plugin="menu">
-            <li class="site-menu-category">General</li>
+            <li class="site-menu-category">வணக்கம்</li>
             <li class="site-menu-item">
               <a class="animsition-link" href="{{ url('admin') }}">
                       <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                      <span class="site-menu-title">Dashboard</span>
+                      <span class="site-menu-title">முகப்பு</span>
                   </a>
             </li>
+
+
+
+            
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                      <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
+                      <span class="site-menu-title">மாஸ்டர் </span>
+                              <span class="site-menu-arrow"></span>
+                  </a>
+              <ul class="site-menu-sub">
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/gods') }}">
+                    <span class="site-menu-title">கடவுள்</span>
+                  </a>
+                </li>
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/caste') }}">
+                    <span class="site-menu-title">ஜாதி</span>
+                  </a>
+                </li>
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/subcaste') }}">
+                    <span class="site-menu-title">உட்பிரிவு</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/naadu') }}">
+                    <span class="site-menu-title">நாடு</span>
+                  </a>
+                </li>
+
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/places') }}">
+                    <span class="site-menu-title">இடம்-ஊர்</span>
+                  </a>
+                </li>  
+              
+                
+               
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/income') }}">
+                    <span class="site-menu-title">வருமானம் </span>
+                  </a>
+                </li>
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/height') }}">
+                    <span class="site-menu-title">உயரம்</span>
+                  </a>
+                </li>
+                
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/education') }}">
+                    <span class="site-menu-title">படிப்பு</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/education') }}">
+                    <span class="site-menu-title">பதவி</span>
+                  </a>
+                </li>
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/age') }}">
+                    <span class="site-menu-title">வயது</span>
+                  </a>
+                </li>   
+
+                <li class="site-menu-item active">
+                  <a class="animsition-link" href="{{ url('admin/weight') }}">
+                    <span class="site-menu-title">எடை</span>
+                  </a>
+                </li>   
+               
+
+               
+
+               
+               
+               
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="../pages/project.html">
+                    <span class="site-menu-title">Test</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
             <li class="site-menu-item has-sub">
               <a href="javascript:void(0)">
                       <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
-                      <span class="site-menu-title">Layouts</span>
+                      <span class="site-menu-title">Test</span>
                               <span class="site-menu-arrow"></span>
                   </a>
               <ul class="site-menu-sub">
@@ -58,48 +150,13 @@
                 </li>
               </ul>
             </li>
-            <li class="site-menu-item has-sub">
-              <a href="javascript:void(0)">
-                      <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
-                      <span class="site-menu-title">Master</span>
-                              <span class="site-menu-arrow"></span>
-                  </a>
-              <ul class="site-menu-sub">
-                
-                <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/places') }}">
-                    <span class="site-menu-title">இடம் </span>
-                  </a>
-                </li>
-
-                <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/ages') }}">
-                    <span class="site-menu-title">வயது </span>
-                  </a>
-                </li>
-
-                <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/gods') }}">
-                    <span class="site-menu-title">God </span>
-                  </a>
-                </li>
-               
-               
-               
-                <li class="site-menu-item">
-                  <a class="animsition-link" href="../pages/project.html">
-                    <span class="site-menu-title">Project</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
+          
          
-            <li class="site-menu-category">Apps</li>
+            <li class="site-menu-category">Test</li>
             <li class="site-menu-item has-sub">
               <a href="javascript:void(0)">
                       <i class="site-menu-icon md-apps" aria-hidden="true"></i>
-                      <span class="site-menu-title">Apps</span>
+                      <span class="site-menu-title">Test</span>
                               <span class="site-menu-arrow"></span>
                   </a>
               <ul class="site-menu-sub">
@@ -114,14 +171,14 @@
           </ul>
           <div class="site-menubar-section">
             <h5>
-              Milestone
+              மொத்தம்
               <span class="float-right">30%</span>
             </h5>
             <div class="progress progress-xs">
               <div class="progress-bar active" style="width: 30%;" role="progressbar"></div>
             </div>
             <h5>
-              Release
+               
               <span class="float-right">60%</span>
             </h5>
             <div class="progress progress-xs">

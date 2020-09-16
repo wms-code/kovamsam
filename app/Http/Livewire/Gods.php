@@ -6,16 +6,16 @@ use Livewire\Component;
 
 use App\God;
 use App\Place;
-use App\Kulam;
+use App\Naadu;
 
 class Gods extends Component
 {
-    public $name, $sel_id,$gods,$msg;
+    public $name, $sel_id,$gods,$msg,$place_id,$naadu_id,$remarks,$msg1;
     public $page='show';
-    public $places;public $kulams;
+    public $places;public $naadu;
     //
     public $value;
-    public $query;public $contacts;public $highlightIndex;
+     
     //
     private function resetInputFields(){
 
@@ -58,7 +58,7 @@ class Gods extends Component
                 ->orderBy('name')                 
                 ->get();
 
-        $this->kulams = Kulam::select('name', 'id')
+        $this->naadu = Naadu::select('name', 'id')
                 ->orderBy('name')                 
                 ->get();        
        
@@ -67,15 +67,18 @@ class Gods extends Component
     }
     public function createGod()
     {
-        $validatedDate = $this->validate([
-            'name' => 'required',
-        ]);
-
-        God::create($validatedDate);
-
+        
+        $this->msg1=$this->place_id.''.$this->name;
         session()->flash('message', 'God Created Successfully.');
+       // $validatedData = $this->validate([
+          //  'name' => 'required',
+       // ]);
 
-        $this->resetInputFields();
+        //God::create($validatedData);
+
+       // session()->flash('message', 'God Created Successfully.');
+
+        //this->resetInputFields();
 
         $this->page='show';
     }

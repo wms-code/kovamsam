@@ -8,7 +8,7 @@ class God extends Model
 {
 protected $table = 'god';
     
-protected $fillable = ['name','remarks','kulam_id','place_id'];
+protected $fillable = ['name','remarks','naadu_id','place_id'];
 
  
 }

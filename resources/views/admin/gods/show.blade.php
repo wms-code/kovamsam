@@ -15,26 +15,29 @@
                         </div>
 
                         <div class="form-group">   
-                            <label for="name">இடம் </label>
+                            <label for="place_id">இடம் </label>
 
-                              <select id="place_id" name="place_id" class="form-control">
+                              <select  id="place_id"  wire:model="place_id" class="form-control">
                                  @foreach ($places as $item)
-                                   <option value="{{ $item->id}}">{{$item->name}}</option> 
-                                 @endforeach                              
+                                   <option value="{{$item->id}}">{{$item->name}}</option>                                  
+                                 @endforeach 
+                              </select>
+                              
                              
                          </div>
 
-                         <div class="form-group">   
-                            <label for="name">நாடு</label>
-                              <select id="kulam_id" name="kulam_id" class="form-control">
-                                 @foreach ($kulams as $item)
+                         <div wire:ignore class="form-group">   
+                            <label for="naadu_id">நாடு</label>
+                              <select  wire:model="naadu_id"    id="naadu_id" name="naadu_id" class="form-control js-example-basic-single">
+                                 @foreach ($naadu as $item)
                                    <option value="{{ $item->id}}">{{$item->name}}</option> 
-                                 @endforeach                             
+                                 @endforeach    
+                                </select>                      
                              
                          </div>
 
                          <div class="form-group">    
-                            <label for="name">குறிப்பு </label>
+                            <label for="remarks">குறிப்பு </label>
                             <input wire:model.defer="remarks" type="text" class="form-control" placeholder="குறிப்பு ">
                         </div>
 
@@ -74,11 +77,12 @@
                     <div class="card-header">
                         God List
                         <span class="float-right">
-                            <button wire:click="newGod" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
+                               <button wire:click="newGod" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
                         </span>
                     </div>
                     
                     <div class="card-body">
+                        <input wire:model.name="msg1" type="text"   class="form-control">
                         <input wire:model.name="msg" type="text"  class="form-control">
                         @if ($gods)
 
@@ -127,6 +131,6 @@
             @endif
         </div>
     </div>
-</div>
+</div>  
 
  
