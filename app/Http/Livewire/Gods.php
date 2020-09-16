@@ -5,15 +5,29 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 
 use App\God;
+use App\Place;
+use App\Kulam;
 
 class Gods extends Component
 {
     public $name, $sel_id,$gods,$msg;
     public $page='show';
-
+    public $places;public $kulams;
+    //
+    public $value;
+    public $query;public $contacts;public $highlightIndex;
+    //
     private function resetInputFields(){
+
         $this->name = '';
+        
     }   
+    public function mount()
+    {
+         
+        $this->resetInputFields();
+    }
+     
     public function render()
     {
         $this->gods=God::all();
@@ -40,6 +54,14 @@ class Gods extends Component
     public function newGod()
     {
         $this->resetInputFields();
+        $this->places = Place::select('name', 'id')
+                ->orderBy('name')                 
+                ->get();
+
+        $this->kulams = Kulam::select('name', 'id')
+                ->orderBy('name')                 
+                ->get();        
+       
         $this->msg='New';
         $this->page='add';
     }

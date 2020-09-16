@@ -5,44 +5,25 @@
         <div class="card">
             @if ($page == 'add')
                     <div class="card-header">
-                        கடவுள்- புதியதாக  சேர்க்க                     
+                        Add New God                    
                     </div>
-
                     <div class="card-body">
-                         <div class="form-group">    
-                             <label for="name">கடவுள் பெயர் </label>
-                             <input wire:model.defer="name" type="text" class="form-control" placeholder="கடவுள்">
-                        </div>
-
-                        <div class="form-group">   
-                            <label for="name">இடம் </label>
-
-                              <select id="place_id" name="place_id" class="form-control">
-                                 @foreach ($places as $item)
-                                   <option value="{{ $item->id}}">{{$item->name}}</option> 
-                                 @endforeach                              
-                             
+                       <div class="form-group">
+                        <input wire:model.name="msg" type="text"  class="form-control">
+                         <label for="name">God's List</label>
+                         <input wire:model.defer="name" type="text" class="form-control" placeholder="God Name">
+                         
+                         <label for="selected_tasks">God's Place List</label>                         
+                         <div class="relative">
                          </div>
-
-                         <div class="form-group">   
-                            <label for="name">நாடு</label>
-                              <select id="kulam_id" name="kulam_id" class="form-control">
-                                 @foreach ($kulams as $item)
-                                   <option value="{{ $item->id}}">{{$item->name}}</option> 
-                                 @endforeach                             
-                             
+                         <input wire:model.defer="name" type="text" class="form-control">
                          </div>
-
-                         <div class="form-group">    
-                            <label for="name">குறிப்பு </label>
-                            <input wire:model.defer="remarks" type="text" class="form-control" placeholder="குறிப்பு ">
-                        </div>
-
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createGod" type="button" class="btn btn-block btn-primary waves-effect waves-classic">சேர்க்க</button>
+                                <button wire:click="createGod" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add God</button>
                             </span>                         
                          </div>
+
                     </div>
 
                 @elseif ($page == 'edit')
@@ -77,7 +58,23 @@
                             <button wire:click="newGod" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
                         </span>
                     </div>
-                    
+                    <div>
+                        <div wire:ignore >
+                            <select>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        
+                        
+                    </div>
+                    <div wire:ignore class="w-full">
+                        <select class="form-control">                        
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+
                     <div class="card-body">
                         <input wire:model.name="msg" type="text"  class="form-control">
                         @if ($gods)
@@ -128,5 +125,22 @@
         </div>
     </div>
 </div>
+<div>
+    <div wire:ignore>
+        <select class="select2" name="state">
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+        </select>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+     import 'alpinejs';
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+</script>
+@endpush
 
  

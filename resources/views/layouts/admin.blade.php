@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap material admin template">
     <meta name="author" content="">
     
-    <title>Blank | Remark Material Admin Template</title>
+    <title>Kovamsammin Template</title>
     
     <link rel="apple-touch-icon" href="{{ url('assets') }}/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="{{ url('assets') }}/images/favicon.ico">

@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 
 use App\Admin;
+use DB;
+
 
 class ShowAdmins extends Component
 {
