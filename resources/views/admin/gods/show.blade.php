@@ -1,4 +1,13 @@
  
+@section('stylesheet')
+@livewireStyles
+
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+
+@endsection
+
 
 <div  class="row justify-content-center">
     <div class="col-md-8">
@@ -7,7 +16,7 @@
                     <div class="card-header">
                         கடவுள்- புதியதாக  சேர்க்க                     
                     </div>
-
+               
                     <div class="card-body">
                          <div class="form-group">    
                              <label for="name">கடவுள் பெயர் </label>
@@ -132,5 +141,6 @@
         </div>
     </div>
 </div>  
+
 
  

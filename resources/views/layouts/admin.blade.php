@@ -34,9 +34,7 @@
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
     @livewireStyles
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+    
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="{{ url('/global') }}/vendor/html5shiv/html5shiv.min.js"></script>
@@ -143,6 +141,9 @@
     <script src="{{ url('/global') }}/js/Plugin/switchery.js"></script>
 
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
     
     <script>
       (function(document, window, $){
@@ -156,16 +157,17 @@
     </script>
     
     
-@push('custom-scripts')
+
+
+ 
 <script>
     $(document).ready(function() {
         alert('s');
-            $('.js-example-basic-single').select2();
+          $('.js-example-basic-single').select2();
 
         
     });
 </script>
-@endpush
 
   </body>
 </html>
