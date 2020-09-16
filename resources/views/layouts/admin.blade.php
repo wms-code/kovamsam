@@ -47,6 +47,8 @@
     
     <!-- Scripts -->
     <script src="{{ url('/global') }}/vendor/breakpoints/breakpoints.js"></script>
+
+    @stack('styles')
     <script>
       Breakpoints();
     </script>
@@ -139,6 +141,7 @@
     <script src="{{ url('/global') }}/js/Plugin/asscrollable.js"></script>
     <script src="{{ url('/global') }}/js/Plugin/slidepanel.js"></script>
     <script src="{{ url('/global') }}/js/Plugin/switchery.js"></script>
+    @stack('scripts')
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>

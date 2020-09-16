@@ -2,6 +2,8 @@
 
     Route::view('/home', 'admin.home')->name('admin.home');
 
+    Route::view('/select2', 'admin.select2');
+
     // Admin Lists
     Route::get('/show', 'AdminController@show')->name('admin.show');
     Route::view('users/show', 'admin.users.home')->name('admin.users');
