@@ -5,80 +5,81 @@
     <div class="col-md-8">
         <div class="card">
             @if ($page == 'add')
+
                     <div class="card-header">
-                        வயது -புதியதாக  சேர்க்க                  
+                         ஜாதி - புதியதாக  சேர்க்க 
+                    
                     </div>
                     <div class="card-body">
                        <div class="form-group">
-                        <input wire:model.name="msg"  readonly type="text"  class="form-control">
-                         <label for="name">Age List</label>
-                         <input wire:model.defer="name" type="text" class="form-control" placeholder="Age Name">
+                         <label for="name">ஜாதி</label>
+                         <input wire:model.defer="name" type="text" class="form-control" placeholder="ஜாதி">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createAge" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add Age</button>
+                                <button wire:click="createCaste" type="button" class="btn btn-block btn-primary waves-effect waves-classic">சேர்க்க</button>
                             </span>
                          
                          </div>
                     </div>
 
-                @elseif ($page == 'edit')
+            @elseif ($page == 'edit')
 
                     <div class="card-header">
-                        வயது  மாற்ற                  
+                          ஜாதி மாற்ற           
                     </div>
                     <div class="card-body">
                        <div class="form-group">
-                        <input wire:model.name="msg" readonly type="text"  class="form-control">
-                         <label for="name">Age name</label>
+                        <input wire:model.name="msg" readoonly type="text"  class="form-control">
+                         <label for="name">ஜாதி</label>
                          <input wire:model.name="sel_id"  type="hidden"  class="form-control">
-                         <input wire:model.name="name" type="text"  class="form-control" placeholder="Age Name">
+                         <input wire:model.name="name" type="text"  class="form-control" >
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="updateAge" type="button" 
+                                <button wire:click="updateCaste" type="button" 
                                 class="btn btn-block btn-primary waves-effect waves-classic">மாற்றுக</button>
                             </span>
                          
                          </div>
                     </div>
 
-                
+                  
             @elseif($page == 'show')
 
 
                     <div class="card-header">
-                        வயது List
+                        ஜாதி List
                         <span class="float-right">
-                            <button wire:click="newAge" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
+                            <button wire:click="newCaste" class="btn btn-sm btn-success waves-effect waves-classic">New ஜாதி</button>
                         </span>
                     </div>
                     <div class="card-body">
-                        <input wire:model.name="msg" type="text"  class="form-control">
-                        @if ($ages)
+                        @if ($castes)
 
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>S.No</th>
-                                    <th>பெயர்</th>
-                                    <th>மாற்று</th>
+                                    <th>id</th>
+                                    <th>ஜாதி</th>
+                                    <th>மாற்ற</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @foreach ($ages as $item)
+                                @foreach ($castes as $item)
                                 <tr>
                                     <td scope="row">{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
                                     <td>
-                                        <div class="" role="group">      
-                                        
-                               <button wire:click="editAge({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                        <div class="" role="group">                                            
+                                           
+
+                                            <button  wire:click="editCaste({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-edit" aria-hidden="true"></i>
                                             </button>
 
-            <button  type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                            <button type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-delete" aria-hidden="true"></i>
                                             </button>
                                           </div>
@@ -92,7 +93,7 @@
                         </table>
                             
                         @else
-                        <p>No Age created Yet !</p>
+                        <p>No Caste created Yet !</p>
                         @endif
                         
                        

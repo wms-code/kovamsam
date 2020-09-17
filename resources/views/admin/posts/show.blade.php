@@ -3,38 +3,29 @@
         <div class="card">
             @if ($page == 'add')                   
                     <div class="card-header">
-                        கடவுள்- புதியதாக  சேர்க்க                     
+                        உட்பிரிவு- புதியதாக  சேர்க்க                     
                     </div>
                      
           
                     <div class="card-body">
                          <div class="form-group">    
-                             <label for="name">கடவுள் பெயர் </label>
-                             <input wire:model.defer="name" type="text" class="form-control"  placeholder="கடவுள்">
+                             <label for="name">உட்பிரிவு பெயர் </label>
+                             <input wire:model.defer="name" type="text" class="form-control"  placeholder="உட்பிரிவு">
                               @error ('name') <span class='error'> {{ $message }}</span> @enderror
                               @if ($errors->has('name')) <p class="error">{{ $errors->first('name') }}</p> @endif
                              
                         </div>
                          <div  class="form-group">   
-                            <label for="place_id">இடம் </label>                 
-                              <select  id="place_id"   class="form-control" wire:model="place_id">
-                                <option value="0">---Select இடம்--</option>
-                                 @foreach ($places as $item)
+                            <label for="caste_id">Caste</label>                 
+                              <select  id="caste_id"   class="form-control" wire:model="caste_id">
+                                <option value="0">---Select Caste--</option>
+                                 @foreach ($castes as $item)
                                    <option value="{{$item->id}}">{{$item->name}}</option>                                  
                                  @endforeach 
                               </select>                            
                              
                          </div>
-
-                         <div class="form-group">   
-                            <label for="naadu_id">நாடு</label>
-                              <select  id="naadu_id" name="naadu_id" class="form-control" wire:model="naadu_id">
-                                  <option value="0">---Select நாடு--</option>
-                                 @foreach ($naadu as $item)
-                                   <option value="{{ $item->id}}">{{$item->name}}</option> 
-                                 @endforeach    
-                                </select>                             
-                         </div>
+ 
 
                          <div class="form-group">    
                             <label for="remarks">குறிப்பு </label>
@@ -43,7 +34,7 @@
 
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createGod" type="button" class="btn btn-block btn-primary waves-effect waves-classic">சேர்க்க</button>
+                                <button wire:click="createSubcaste" type="button" class="btn btn-block btn-primary waves-effect waves-classic">சேர்க்க</button>
                             </span>                         
                          </div>
                     </div>
@@ -52,40 +43,30 @@
                 @elseif ($page == 'edit')
 
                     <div class="card-header">
-                        Edit  கடவுள்                    
+                        Edit  உட்பிரிவு                    
                     </div>
                     <div class="card-body">
                        <div class="form-group">
                         <input wire:model.name="msg" type="text" readonly  class="form-control">
-                         <label for="name">கடவுள் பெயர்</label>
+                         <label for="name">உட்பிரிவு பெயர்</label>
                          <input wire:model.name="sel_id"  type="hidden"  class="form-control">
                          <input wire:model.name="name" type="text"  class="form-control">
                          </div>
 
                          <div  class="form-group">   
-                            <label for="place_id">இடம்</label>                 
-                              <select  id="place_id"   class="form-control" wire:model="place_id">
-                                <option value="0">---Select இடம்--</option>
-                                 @foreach ($places as $item)
+                            <label for="caste_id">Caste</label>                 
+                              <select  id="caste_id"   class="form-control" wire:model="caste_id">
+                                <option value="0">---Select Sub Caste--</option>
+                                 @foreach ($castes as $item)
                                    <option value="{{$item->id}}" 
-                                    {{ $place_id == $item->id ? 'selected="selected"' : '' }}
+                                    {{ $caste_id == $item->id ? 'selected="selected"' : '' }}
                                     >{{$item->name}}</option>                                  
                                  @endforeach 
                               </select>                            
                              
                          </div>
 
-                         <div class="form-group">   
-                            <label for="naadu_id">நாடு</label>
-                              <select  id="naadu_id" name="naadu_id" class="form-control" wire:model="naadu_id">
-                                  <option value="0">---Select நாடு--</option>
-                                 @foreach ($naadu as $item)
-                                   <option value="{{ $item->id}}"
-                                    {{ $naadu_id == $item->id ? 'selected="selected"' : '' }}
-                                    >{{$item->name}}</option> 
-                                 @endforeach    
-                                </select>                             
-                         </div>
+                          
 
                          <div class="form-group">    
                             <label for="remarks">குறிப்பு</label>
@@ -95,7 +76,7 @@
 
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="updateGod" type="button" 
+                                <button wire:click="updateSubcaste" type="button" 
                                 class="btn btn-block btn-primary waves-effect waves-classic">மாற்றுக</button>
                             </span>
                          
@@ -108,16 +89,16 @@
                     
                     
                     <div class="card-header">
-                        God List
+                        உட்பிரிவு List
                         <span class="float-right">
-                               <button wire:click="newGod" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
+                               <button wire:click="newSubcaste" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
                         </span>
                     </div>
                     
                     <div class="card-body">
-                        <input wire:model.name="msg1" type="text" readonly   class="form-control">
+                        <input wire:model.name="msg1"   type="text" readonly   class="form-control">
                         <input wire:model.name="msg" type="text"  readonly class="form-control">
-                        @if ($gods)
+                        @if ($subcastes)
 
                         <table class="table">
                             <thead>
@@ -129,13 +110,13 @@
                             </thead>
                             <tbody>
 
-                                @foreach ($gods as $item)
+                                @foreach ($subcastes as $item)
                                 <tr>
                                     <td scope="row">{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
                                     <td>
                                         <div class="" role="group">                                          
-                                            <button wire:click="editGod({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                            <button wire:click="editSubcaste({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-edit" aria-hidden="true"></i>
                                             </button> 
                                             <button  type="button"
@@ -153,7 +134,7 @@
                         </table>
                             
                         @else
-                        <p>No God created Yet !</p>
+                        <p>No Sub Caste created Yet !</p>
                         @endif
                         
                        

@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Caste extends Model
+class Height extends Model
 {
-    protected $table='caste';
+    protected $table='height';
     
     protected $fillable = ['name'];
 

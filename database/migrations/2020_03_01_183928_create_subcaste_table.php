@@ -12,7 +12,9 @@ class CreateSubcasteTable extends Migration
         
         Schema::create('subcaste', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100)->unique();         
+            $table->string('name', 100)->unique();  
+            $table->unsignedBigInteger('place_id')->nullable();
+            $table->string('remarks', 100)->nullable();       
             $table->timestamps();
         });
     }

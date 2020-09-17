@@ -28,18 +28,18 @@
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/caste') }}">
+                  <a class="animsition-link" href="{{ url('admin/castes') }}">
                     <span class="site-menu-title">ஜாதி</span>
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/subcaste') }}">
+                  <a class="animsition-link" href="{{ url('admin/subcastes') }}">
                     <span class="site-menu-title">உட்பிரிவு</span>
                   </a>
                 </li>
 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/naadu') }}">
+                  <a class="animsition-link" href="{{ url('admin/naadus') }}">
                     <span class="site-menu-title">நாடு</span>
                   </a>
                 </li>
@@ -59,31 +59,31 @@
                   </a>
                 </li>
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/height') }}">
+                  <a class="animsition-link" href="{{ url('admin/heights') }}">
                     <span class="site-menu-title">உயரம்</span>
                   </a>
                 </li>
                 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/education') }}">
+                  <a class="animsition-link" href="{{ url('admin/educations') }}">
                     <span class="site-menu-title">படிப்பு</span>
                   </a>
                 </li>
 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/education') }}">
+                  <a class="animsition-link" href="{{ url('admin/works') }}">
                     <span class="site-menu-title">பதவி</span>
                   </a>
                 </li>
 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/age') }}">
+                  <a class="animsition-link" href="{{ url('admin/ages') }}">
                     <span class="site-menu-title">வயது</span>
                   </a>
                 </li>   
 
                 <li class="site-menu-item active">
-                  <a class="animsition-link" href="{{ url('admin/weight') }}">
+                  <a class="animsition-link" href="{{ url('admin/weights') }}">
                     <span class="site-menu-title">எடை</span>
                   </a>
                 </li>   

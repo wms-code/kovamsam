@@ -4,10 +4,10 @@
     
     <div class="panel">
         <div class="panel-heading">
-          <h3 class="panel-title">வயது</h3>
+          <h3 class="panel-title">உயரம்</h3>
         </div>
         <div class="panel-body">
-            <livewire:ages>
+            <livewire:heights>
         </div>
       </div>
 

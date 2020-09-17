@@ -5,80 +5,81 @@
     <div class="col-md-8">
         <div class="card">
             @if ($page == 'add')
+
                     <div class="card-header">
-                        வயது -புதியதாக  சேர்க்க                  
+                         வருமானம் - புதியதாக  சேர்க்க 
+                    
                     </div>
                     <div class="card-body">
                        <div class="form-group">
-                        <input wire:model.name="msg"  readonly type="text"  class="form-control">
-                         <label for="name">Age List</label>
-                         <input wire:model.defer="name" type="text" class="form-control" placeholder="Age Name">
+                         <label for="name">வருமானம்</label>
+                         <input wire:model.defer="name" type="text" class="form-control" placeholder="வருமானம்">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createAge" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add Age</button>
+                                <button wire:click="createIncome" type="button" class="btn btn-block btn-primary waves-effect waves-classic">சேர்க்க</button>
                             </span>
                          
                          </div>
                     </div>
 
-                @elseif ($page == 'edit')
+            @elseif ($page == 'edit')
 
                     <div class="card-header">
-                        வயது  மாற்ற                  
+                          வருமானம் மாற்ற           
                     </div>
                     <div class="card-body">
                        <div class="form-group">
                         <input wire:model.name="msg" readonly type="text"  class="form-control">
-                         <label for="name">Age name</label>
+                         <label for="name">வருமானம்</label>
                          <input wire:model.name="sel_id"  type="hidden"  class="form-control">
-                         <input wire:model.name="name" type="text"  class="form-control" placeholder="Age Name">
+                         <input wire:model.name="name" type="text"  class="form-control" >
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="updateAge" type="button" 
+                                <button wire:click="updateIncome" type="button" 
                                 class="btn btn-block btn-primary waves-effect waves-classic">மாற்றுக</button>
                             </span>
                          
                          </div>
                     </div>
 
-                
+                  
             @elseif($page == 'show')
 
 
                     <div class="card-header">
-                        வயது List
+                        வருமானம் List
                         <span class="float-right">
-                            <button wire:click="newAge" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
+                            <button wire:click="newIncome" class="btn btn-sm btn-success waves-effect waves-classic">New வருமானம்</button>
                         </span>
                     </div>
                     <div class="card-body">
-                        <input wire:model.name="msg" type="text"  class="form-control">
-                        @if ($ages)
+                        @if ($incomes)
 
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>S.No</th>
-                                    <th>பெயர்</th>
-                                    <th>மாற்று</th>
+                                    <th>id</th>
+                                    <th>வருமானம்</th>
+                                    <th>மாற்ற</th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @foreach ($ages as $item)
+                                @foreach ($incomes as $item)
                                 <tr>
                                     <td scope="row">{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
                                     <td>
-                                        <div class="" role="group">      
-                                        
-                               <button wire:click="editAge({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                        <div class="" role="group">                                            
+                                           
+
+                                            <button  wire:click="editIncome({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-edit" aria-hidden="true"></i>
                                             </button>
 
-            <button  type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                                            <button type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-delete" aria-hidden="true"></i>
                                             </button>
                                           </div>
@@ -92,7 +93,7 @@
                         </table>
                             
                         @else
-                        <p>No Age created Yet !</p>
+                        <p>No Income created Yet !</p>
                         @endif
                         
                        

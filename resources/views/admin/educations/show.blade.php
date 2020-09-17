@@ -6,17 +6,17 @@
         <div class="card">
             @if ($page == 'add')
                     <div class="card-header">
-                        வயது -புதியதாக  சேர்க்க                  
+                        படிப்பு -புதியதாக  சேர்க்க                  
                     </div>
                     <div class="card-body">
                        <div class="form-group">
                         <input wire:model.name="msg"  readonly type="text"  class="form-control">
-                         <label for="name">Age List</label>
-                         <input wire:model.defer="name" type="text" class="form-control" placeholder="Age Name">
+                         <label for="name">படிப்பு List</label>
+                         <input wire:model.defer="name" type="text" class="form-control" placeholder="படிப்பு Name">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="createAge" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add Age</button>
+                                <button wire:click="createEducation" type="button" class="btn btn-block btn-primary waves-effect waves-classic">Add படிப்பு</button>
                             </span>
                          
                          </div>
@@ -25,18 +25,18 @@
                 @elseif ($page == 'edit')
 
                     <div class="card-header">
-                        வயது  மாற்ற                  
+                        படிப்பு  மாற்ற                  
                     </div>
                     <div class="card-body">
                        <div class="form-group">
                         <input wire:model.name="msg" readonly type="text"  class="form-control">
-                         <label for="name">Age name</label>
+                         <label for="name">படிப்பு name</label>
                          <input wire:model.name="sel_id"  type="hidden"  class="form-control">
-                         <input wire:model.name="name" type="text"  class="form-control" placeholder="Age Name">
+                         <input wire:model.name="name" type="text"  class="form-control" placeholder="படிப்பு Name">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
-                                <button wire:click="updateAge" type="button" 
+                                <button wire:click="updateEducation" type="button" 
                                 class="btn btn-block btn-primary waves-effect waves-classic">மாற்றுக</button>
                             </span>
                          
@@ -48,14 +48,14 @@
 
 
                     <div class="card-header">
-                        வயது List
+                        படிப்பு List
                         <span class="float-right">
-                            <button wire:click="newAge" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
+                            <button wire:click="newEducation" class="btn btn-sm btn-success waves-effect waves-classic">  புதியதாக சேர்க்க </button>
                         </span>
                     </div>
                     <div class="card-body">
                         <input wire:model.name="msg" type="text"  class="form-control">
-                        @if ($ages)
+                        @if ($educations)
 
                         <table class="table">
                             <thead>
@@ -67,7 +67,7 @@
                             </thead>
                             <tbody>
 
-                                @foreach ($ages as $item)
+                                @foreach ($educations as $item)
                                 <tr>
                                     <td scope="row">{{ $item->id}}</td>
                                     <td>{{ $item->name}}</td>
@@ -92,7 +92,7 @@
                         </table>
                             
                         @else
-                        <p>No Age created Yet !</p>
+                        <p>No Education created Yet !</p>
                         @endif
                         
                        

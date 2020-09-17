@@ -34,9 +34,7 @@
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
     @livewireStyles
-    
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
+   <!--[if lt IE 9]>
     <script src="{{ url('/global') }}/vendor/html5shiv/html5shiv.min.js"></script>
     <![endif]-->
     
@@ -144,10 +142,7 @@
     @stack('scripts')
 
     @livewireScripts
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
-    
+     
     <script>
       (function(document, window, $){
         'use strict';
@@ -159,15 +154,7 @@
       })(document, window, jQuery);
     </script>
     
-    
-@push('scripts')
-<script>
-    $(document).ready(function() {
-        $('.select2').select2();
-    });
-</script>
-@endpush
-
+     
 
 
  

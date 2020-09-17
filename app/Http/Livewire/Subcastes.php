@@ -6,17 +6,17 @@ use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Livewire\Component;
-use App\God;
-use App\Place;
-use App\Naadu;
+use App\Subcaste;
+use App\Caste;
+
 use Validator;
 
 
-class Gods extends Component
+class Subcastes extends Component
 {
-    public $name, $sel_id,$gods,$msg,$place_id,$naadu_id,$remarks,$msg1;
+    public $name, $sel_id,$subcastes,$msg,$caste_id,$remarks,$msg1;
     public $page='show';
-    public $places;public $naadu;
+    public $castes; 
     //
     public $value;
     protected $rules=[
@@ -36,71 +36,58 @@ class Gods extends Component
      
     public function render()
     {
-        $this->gods=God::all();
-        return view('admin.gods.show');
+        $this->subcastes=Subcaste::all();
+        return view('admin.subcastes.show');
     }
-    public function editGod($id)
+    public function editSubcaste($id)
     {
         $this->msg='Edit';
-        $record=God::find($id);
+        $record=Subcaste::find($id);
         $this->name=$record->name;
         $this->sel_id=$record->id;
-        $this->place_id=$record->place_id;
-        $this->naadu_id=$record->naadu_id;
+        $this->caste_id=$record->caste_id;        
         $this->remarks=$record->remarks;
-        $this->places = Place::select('name', 'id')
+        $this->castes = Caste::select('name', 'id')
                 ->orderBy('name')                 
                 ->get();
 
-        $this->naadu = Naadu::select('name', 'id')
-                ->orderBy('name')                 
-                ->get();
+         
         $this->page=('edit');    
       
     }
-    public function updateGod()
+    public function updateSubcaste()
     {
-        $record=God::find($this->sel_id);
+        $record=Subcaste::find($this->sel_id);
         $record->update([
             'name'=>$this->name,
-            'place_id'=>$this->place_id,            
-            'naadu_id'=>$this->naadu_id,
+            'caste_id'=>$this->caste_id,            
             'remarks'=>$this->remarks,           
             ]);
-        $this->msg='God Updated Successfully.';        
+        $this->msg='Subcaste Updated Successfully.';        
         $this->page='show';               
     }
-    public function newGod()
+    public function newSubcaste()
     {
         $this->resetInputFields();
-        $this->places = Place::select('name', 'id')
+        $this->castes = Caste::select('name', 'id')
                 ->orderBy('name')                 
                 ->get();
 
-        $this->naadu = Naadu::select('name', 'id')
-                ->orderBy('name')                 
-                ->get();        
        
         $this->msg='New';
         $this->page='add';
     }
-     public function createGod()
+     public function createSubcaste()
     { 
+           
+        $savetrue=0;        
         
-        $this->msg1=$this->place_id.'-'.$this->name.'-'.$this->naadu_id;
-        $savetrue=0;
-         
-        $validatedData =  $this->validate([
-    	        'name' => ['required','name',Rule::unique('places')],
-        ]);
-
         $validatedData=['name'=>$this->name,
-                         'place_id'=>$this->place_id,
-                         'naadu_id'=>$this->naadu_id,
+                         'caste_id'=>$this->caste_id, 
                          'remarks'=>$this->remarks,                        
                         ];
         
-        $savetrue=God::insertGetId($validatedData);
+        $savetrue=Subcaste::insertGetId($validatedData);
         if ($savetrue>0)
         {
             $this->msg1=$savetrue.'-'."Data Saved Succesfully!!!";
@@ -115,9 +102,9 @@ class Gods extends Component
           //  'name' => 'required',
        // ]);
 
-        //God::create($validatedData);
+        //Subcaste::create($validatedData);
 
-       // session()->flash('message', 'God Created Successfully.');
+       // session()->flash('message', 'Subcaste Created Successfully.');
 
         $this->resetInputFields();
 

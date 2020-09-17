@@ -8,9 +8,19 @@
     Route::get('/show', 'AdminController@show')->name('admin.show');
     Route::view('users/show', 'admin.users.home')->name('admin.users');
     Route::view('/showusers','admin.showusers');
+    
     Route::view('/places','admin.places');
     Route::view('/ages','admin.ages');
     Route::view('/gods','admin.gods');
+    Route::view('/castes','admin.castes');
+    Route::view('/subcastes','admin.subcastes');
+    Route::view('/income','admin.income');
+    Route::view('/naadus','admin.naadus');
+    Route::view('/heights','admin.heights');
+    Route::view('/works','admin.works');
+    Route::view('/educations','admin.educations');
+    Route::view('/weights','admin.weights');
+   
    // Route::resource('ages', 'UserController@index');
      
     // Login and Logout
