@@ -18,7 +18,7 @@
     Route::view('/naadus','admin.naadus');
     Route::view('/heights','admin.heights');
     Route::view('/works','admin.works');
-    Route::view('/educations','admin.educations');
+    Route::view('/educations','admin.educations'); 
     Route::view('/weights','admin.weights');
    
    // Route::resource('ages', 'UserController@index');

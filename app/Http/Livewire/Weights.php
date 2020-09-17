@@ -68,8 +68,8 @@ class Weights extends Component
         ]);
         
         $this->validate([
-            'name' => 'required|min:5',
-            'phone' => 'required'
+            'name' => 'required|min:2',
+          
         ]);
 
 

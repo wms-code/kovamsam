@@ -12,7 +12,7 @@
                        <div class="form-group">
                         <input wire:model.name="msg"  readonly type="text"  class="form-control">
                          <label for="name">படிப்பு List</label>
-                         <input wire:model.defer="name" type="text" class="form-control" placeholder="படிப்பு Name">
+                         <input wire:model.defer="name" type="text" class="form-control" placeholder="படிப்பு">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
@@ -32,7 +32,7 @@
                         <input wire:model.name="msg" readonly type="text"  class="form-control">
                          <label for="name">படிப்பு name</label>
                          <input wire:model.name="sel_id"  type="hidden"  class="form-control">
-                         <input wire:model.name="name" type="text"  class="form-control" placeholder="படிப்பு Name">
+                         <input wire:model.name="name" type="text"  class="form-control" placeholder="படிப்பு">
                          </div>
                          <div class="col-md-8">
                             <span class="float-right">
@@ -74,7 +74,7 @@
                                     <td>
                                         <div class="" role="group">      
                                         
-                               <button wire:click="editAge({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
+                               <button wire:click="editEducation({{ $item->id }})" type="button" class="btn btn-floating btn-primary btn-xs waves-effect waves-classic">
                                                 <i class="icon md-edit" aria-hidden="true"></i>
                                             </button>
 

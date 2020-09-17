@@ -64,7 +64,7 @@
                   </a>
                 </li>
                 
-                <li class="site-menu-item active">
+                <li class="site-menu-item active"> 
                   <a class="animsition-link" href="{{ url('admin/educations') }}">
                     <span class="site-menu-title">படிப்பு</span>
                   </a>

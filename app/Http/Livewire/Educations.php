@@ -6,8 +6,8 @@ use Livewire\Component;
 use Illuminate\Http\Request;
 
 use App\Education;
-
-class Eudcations extends Component
+ 
+class Educations extends Component
 {
      public $name,$sel_id,$msg; 
      public $page='show';
@@ -23,7 +23,7 @@ class Eudcations extends Component
         return view('admin.educations.show');
     }
 
-    public function newAge()
+    public function newEducation()
     {
         $this->resetInputFields();
         $this->msg='New';
@@ -69,7 +69,7 @@ class Eudcations extends Component
         
         $this->validate([
             'name' => 'required|min:5',
-            'phone' => 'required'
+            
         ]);
 
 
