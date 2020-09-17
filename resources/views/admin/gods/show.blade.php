@@ -1,32 +1,34 @@
+
+               
  
-@section('stylesheet')
-@livewireStyles
-
-
-<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-
-
-@endsection
+  
 
 
 <div  class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            @if ($page == 'add')
+            @if ($page == 'add')                   
                     <div class="card-header">
                         கடவுள்- புதியதாக  சேர்க்க                     
                     </div>
-               
+                    <div wire:ignore>
+                        <select class="form-control select2" name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                
+                        <!-- Select2 will insert its DOM here. -->
+                    </div>
+                
                     <div class="card-body">
                          <div class="form-group">    
                              <label for="name">கடவுள் பெயர் </label>
                              <input wire:model.defer="name" type="text" class="form-control" placeholder="கடவுள்">
                         </div>
-
-                        <div class="form-group">   
+                         <div  class="form-group">   
                             <label for="place_id">இடம் </label>
-
-                              <select  id="place_id"  wire:model="place_id" class="form-control">
+                 
+                              <select  id="place_id"  wire:model="place_id" class="form-control ">
                                  @foreach ($places as $item)
                                    <option value="{{$item->id}}">{{$item->name}}</option>                                  
                                  @endforeach 
@@ -35,15 +37,23 @@
                              
                          </div>
 
-                         <div wire:ignore class="form-group">   
+                         <div wire:ignore>   
                             <label for="naadu_id">நாடு</label>
-                              <select  wire:model="naadu_id"    id="naadu_id" name="naadu_id" class="form-control js-example-basic-single">
+                              <select  wire:model="naadu_id"    id="naadu_id" name="naadu_id" class="form-control select2">
                                  @foreach ($naadu as $item)
                                    <option value="{{ $item->id}}">{{$item->name}}</option> 
                                  @endforeach    
                                 </select>                      
                              
                          </div>
+
+
+
+                         
+         
+        
+
+
 
                          <div class="form-group">    
                             <label for="remarks">குறிப்பு </label>
@@ -142,5 +152,15 @@
     </div>
 </div>  
 
-
  
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+
+<script>
+    
+    $(document).ready(function() {
+        alert('s');
+        $('.select2').select2();
+    });
+</script>
+@endpush
