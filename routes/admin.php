@@ -1,6 +1,8 @@
 <?php
 
     Route::view('/home', 'admin.home')->name('admin.home');
+    
+    Route::view('/adminlogin', 'admin.home')->name('admin.home');
 
     Route::view('/select2', 'admin.select2');
 
@@ -24,7 +26,9 @@
    // Route::resource('ages', 'UserController@index');
      
     // Login and Logout
+
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');
+    //Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');    
     Route::POST('/', 'LoginController@login');
     Route::POST('/logout', 'LoginController@logout')->name('admin.logout');
 

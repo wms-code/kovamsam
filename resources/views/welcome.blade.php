@@ -81,14 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="{{ route('admin/login') }}">Admin Login</a>
-                    Admin Login
+                    <a href="{{ url('/admin') }}">Admin Login</a>
+                  
                 </div>
 
                 <div class="links">       
                     <a href="{{ route('login') }}">Already Registred Users - Login Here </a>
                     <a href="{{ route('register') }}">New User - Register Here</a>
-                    <a href="https://github.com/laravel/laravel">Welcome</a>
+             
                 </div>
             </div>
         </div>
