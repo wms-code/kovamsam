@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} {{ ucfirst(config('multiauth.prefix')) }}</title>
+    <title>{{ config('app.name', 'Kovamsam') }} {{ ucfirst(config('multiauth.prefix')) }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -47,7 +47,7 @@
                         @guest('admin')
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('admin.login')}}">{{ ucfirst(config('multiauth.prefix'))
-                                }} Login</a>
+                                }}Kovamsam  Login</a>
                         </li>
                         @else
                         <li class="nav-item dropdown">

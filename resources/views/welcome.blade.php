@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Kovamsam</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -82,12 +82,14 @@
             <div class="content">
                 <div class="title m-b-md">
                     <a href="{{ url('/admin') }}">Admin Login</a>
+                    <br>
+                    <a href="{{ url('/admin/userregs') }}">New User - Register Here</a>
                   
                 </div>
 
                 <div class="links">       
                     <a href="{{ route('login') }}">Already Registred Users - Login Here </a>
-                    <a href="{{ route('register') }}">New User - Register Here</a>
+                    
              
                 </div>
             </div>

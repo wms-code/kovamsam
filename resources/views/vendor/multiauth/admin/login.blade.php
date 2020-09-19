@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ ucfirst(config('multiauth.prefix')) }} Login</div>
+                <div class="card-header">{{ ucfirst(config('multiauth.prefix')) }}  </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.login') }}" aria-label="{{ __('Admin Login') }}">
@@ -14,7 +14,8 @@
                             <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                 name="email" value="{{ old('email') }}" value="s"
                                     required autofocus> @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>

@@ -11,6 +11,7 @@
     Route::view('users/show', 'admin.users.home')->name('admin.users');
     Route::view('/showusers','admin.showusers');
     
+    Route::view('/userregs','admin.userregs');
     Route::view('/places','admin.places');
     Route::view('/ages','admin.ages');
     Route::view('/gods','admin.gods');
