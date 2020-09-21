@@ -16,18 +16,57 @@ use Validator;
 class Userregs extends Component
 {
     public $name, $sel_id,$gods,$msg,$place_id,$naadu_id,$remarks,$msg1;
+    public $naadus,$contact_no;
     public $page='show';
-    public $places;public $naadu;
+    public $places,$message;
     //
     public $value;
     protected $rules=[
         'name'=>'required|min:6',
     ];
-     
+    public function checkName()
+    {
+        $this->message='பெயர் சேர்க்கவும் ';        
+
+    }
+    public function newUser()
+    {
+        //$this->addError($this->name, 'message');
+       $names=$this->name;
+       if(empty($names)){
+        $this->message='பயனாளர்  பெயர் 2';
+        }
+        $this->naadus = God::select('name', 'id')
+        ->orderBy('name')                 
+        ->get();
+       $this->page='show';
+    }
+    public function render()
+    {
+        $this->message='';
+        $this->gods=User::all();
+        $this->name=$this->name;
+        $this->remarks=$this->remarks;        
+        $this->naadus = Naadu::select('name', 'id')
+        ->orderBy('name')                 
+        ->get();
+        
+        return view('admin.userregs.show');
+    }
+
+    public function createUser()
+    { 
+        $this->name='';
+        $this->remarks='';
+        $this->naadus = Place::select('name', 'id')
+             ->orderBy('name')                 
+             ->get();
+        
+        $this->page='show';
+    }
     private function resetInputFields(){
 
-        $this->name = '';
-        
+        $this->name = '';        
     }   
     public function mount()
     {
@@ -35,11 +74,7 @@ class Userregs extends Component
         $this->resetInputFields();
     }
      
-    public function render()
-    {
-        $this->gods=User::all();
-        return view('admin.userregs.show');
-    }
+  
     public function editUser($id)
     {
         $this->page=('edit');    
@@ -49,15 +84,8 @@ class Userregs extends Component
     {
         $this->page='show';               
     }
-    public function newUser()
-    {
-        $this->page='add';
-    }
-     public function createUser()
-    { 
-        
-        $this->page='show';
-    }
+  
+   
 
 
 }

@@ -15,15 +15,14 @@
                               @if ($errors->has('name')) <p class="error">{{ $errors->first('name') }}</p> @endif
                              
                         </div>
-                         <div  class="form-group">   
+                        <div  class="form-group">   
                             <label for="caste_id">Caste</label>                 
                               <select  id="caste_id"   class="form-control" wire:model="caste_id">
                                 <option value="0">---Select Caste--</option>
                                  @foreach ($castes as $item)
                                    <option value="{{$item->id}}">{{$item->name}}</option>                                  
                                  @endforeach 
-                              </select>                            
-                             
+                              </select>     
                          </div>
  
 
