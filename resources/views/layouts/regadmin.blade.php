@@ -28,6 +28,16 @@
     <link rel="stylesheet" href="{{ url('/global') }}/vendor/flag-icon-css/flag-icon.css">
     <link rel="stylesheet" href="{{ url('/global') }}/vendor/waves/waves.css">
     
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      input[type="number"] {
+         -moz-appearance: textfield;
+      }
+      </style>
     
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ url('/global') }}/fonts/material-design/material-design.min.css">

@@ -45,7 +45,8 @@
     
     <!-- Scripts -->
     <script src="{{ url('/global') }}/vendor/breakpoints/breakpoints.js"></script>
-
+    
+    
     @stack('styles')
     <script>
       Breakpoints();
