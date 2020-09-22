@@ -14,6 +14,8 @@ class AddExtraToUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            
+            $table->unsignedBigInteger('gender')->default(0); 
             $table->unsignedBigInteger('contact_no')->unique(); 
             $table->unsignedBigInteger('age_id')->nullable(); 
             $table->unsignedBigInteger('education_id')->nullable(); 
@@ -41,6 +43,7 @@ class AddExtraToUserTable extends Migration
             $table->dropColumn('place_id');
             $table->dropColumn('naadu_id');
             $table->dropColumn('remarks');
+            $table->dropColumn('gender');
 
             
         });
