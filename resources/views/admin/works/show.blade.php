@@ -7,7 +7,7 @@
             @if ($page == 'add')
 
                     <div class="card-header">
-                         பதவி-வேலை  - புதியதாக  சேர்க்க 
+                         பதவி-வேலை s - புதியதாக  சேர்க்க 
                     
                     </div>
                     <div class="card-body">
