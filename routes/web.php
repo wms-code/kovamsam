@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('git', function () {
+    $data   = [];
+    $data[] = shell_exec("git pull https://sethunathan::zxcvbnm12#$%^@github.com/sethunathan/kovamsam.git");   
+    dd($data);
+    
+});
+
