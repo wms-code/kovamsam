@@ -24,7 +24,7 @@ Route::get('git', function () {
     $data   = [];    
   
 
-    $data[] = shell_exec("cd /home/admin/web/kongutimes.in/public_html/kovamsam && git pull https://sethunathan::asdfghjkl12!@#$@github.com/wms-code/kovamsam.git");   
+    $data[] = shell_exec("cd /home/admin/web/kongutimes.in/public_html/kovamsam && git pull https://sethunathan::asdfghjkl12!#$@github.com/wms-code/kovamsam.git");   
 
     dd($data);
     
