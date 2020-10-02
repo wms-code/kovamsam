@@ -1,0 +1,27 @@
+https://devanswers.co/manually-upgrade-phpmyadmin/
+
+mWqMHcffpann3aWEURiM-root password http://95.217.18.141/
+
+cd /usr/share
+cd phpMyAdmin
+
+
+
+sudo mv /usr/share/phpMyAdmin/ /usr/share/phpMyAdmin.bak
+sudo mkdir /usr/share/phpMyAdmin/
+cd /usr/share/phpMyAdmin/
+sudo wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
+sudo tar xzf phpMyAdmin-5.0.2-all-languages.tar.gz
+"ls"
+
+sudo mv phpMyAdmin-5.0.2-all-languages/* /usr/share/phpMyAdmin
+
+sudo nano /usr/share/phpMyAdmin/libraries/vendor_config.php
+
+define('TEMP_DIR', '/var/lib/phpmyadmin/tmp/');
+define('CONFIG_DIR', '/etc/phpmyadmin/');
+
+
+sudo rm /usr/share/phpMyAdmin/phpMyAdmin-5.0.2-all-languages.tar.gz
+sudo rm -rf /usr/share/phpMyAdmin/phpMyAdmin-5.0.2-all-languages
+sudo rm -rf /usr/share/phpMyAdmin.bak

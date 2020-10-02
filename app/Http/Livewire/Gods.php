@@ -90,10 +90,7 @@ class Gods extends Component
         $this->msg1=$this->place_id.'-'.$this->name.'-'.$this->naadu_id;
         $savetrue=0;
          
-        $validatedData =  $this->validate([
-    	        'name' => ['required','name',Rule::unique('places')],
-        ]);
-
+         
         $validatedData=['name'=>$this->name,
                          'place_id'=>$this->place_id,
                          'naadu_id'=>$this->naadu_id,
@@ -110,14 +107,7 @@ class Gods extends Component
             $this->msg1="Unable to Save!!!";
 
         }
-
-       // $validatedData = $this->validate([
-          //  'name' => 'required',
-       // ]);
-
-        //God::create($validatedData);
-
-       // session()->flash('message', 'God Created Successfully.');
+ 
 
         $this->resetInputFields();
 
