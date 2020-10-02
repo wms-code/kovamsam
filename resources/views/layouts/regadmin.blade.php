@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Kovamsam  கோவம்சம் Times">
+    <meta name="description" content="Kongu Times.in">
     <meta name="author" content="">
     
-    <title>கோவம்சம் - Kovamsam Times</title>
+    <title>Kongu Times.in</title>
     
     
     <link rel="apple-touch-icon" href="{{ url('assets') }}/images/apple-touch-icon.png">

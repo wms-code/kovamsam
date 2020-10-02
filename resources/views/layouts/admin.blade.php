@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Kovamsam  கோவம்சம் Times">
+    <meta name="description" content="KonguTimes">
     <meta name="author" content="">
     
-    <title>கோவம்சம் - Kovamsam Times</title>
+    <title>KonguTimes</title>
     
     
     <link rel="apple-touch-icon" href="{{ url('assets') }}/images/apple-touch-icon.png">
@@ -71,7 +71,7 @@
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
           <img class="navbar-brand-logo" src="{{ url('assets') }}/images/logo.png" title="Remark">
-          <span class="navbar-brand-text hidden-xs-down"> Kovamsam</span>
+          <span class="navbar-brand-text hidden-xs-down"> KonguTimes</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
           data-toggle="collapse">

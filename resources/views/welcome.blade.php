@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>nathan</title>
+        <title>KonguTimes.in</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home Sethu</a>
+                        <a href="{{ url('/home') }}">Home </a>
                     @else
                         <a href="{{ route('login') }}">Already Registred Users - Login Here </a>
 
