@@ -26,7 +26,7 @@ Route::get('git', function () {
     $data[] = shell_exec("git status"); 
     $data[] = shell_exec("ls"); 
 
-    //$data[] = shell_exec("git pull https://sethunathan::asdfghjkl12!@#$@github.com/wms-code/kovamsam.git");   
+    $data[] = shell_exec("git pull https://sethunathan::asdfghjkl12!@#$@github.com/wms-code/kovamsam.git");   
 
     dd($data);
     
