@@ -23,8 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('git', function () {
     $data   = [];    
 
-    $data[] = shell_exec("git status"); 
-    $data[] = shell_exec("ls"); 
+   // $data[] = shell_exec("git status"); 
+   // $data[] = shell_exec("ls"); 
 
     $data[] = shell_exec("git pull https://sethunathan::asdfghjkl12!@#$@github.com/wms-code/kovamsam.git");   
 
